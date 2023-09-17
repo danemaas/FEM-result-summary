@@ -1,0 +1,219 @@
+/*=========== GOOGLE FONT ===========*/
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+/*=========== VARIABLES ===========*/
+:root {
+    --p-fontsize: 18px;
+
+    /* PRIMARY COLORS */
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    /* NUETRAL COLORS */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavander: hsl(241, 100%, 89%);
+    --dark-grayblue: hsl(224, 30%, 27%);
+
+    /* GRADIENT COLORS */
+    --bg-color-one: hsl(252, 100%, 67%);
+    --bg-color-two: hsl(241, 81%, 54%);
+    --circle-color-one: hsla(256, 72%, 46%, 1);
+    --circle-color-two: hsla(241, 72%, 46%, 0);
+
+    --desktop: 1440px;
+    --mobile: 375px;
+
+    --bolder: 800;
+    --bold: 700;
+    --semibold: 500;
+}
+
+/*=========== BASE ===========*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/*=========== MAIN ===========*/
+.container {
+    width: var(--mobile);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.results {
+    background: linear-gradient(to top, hsl(242, 82%, 55%), hsla(242, 82%, 55%, 0.774));
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-title, .out-off, .result-text {
+    color: var(--light-lavander);
+}
+
+.score, .score-description {
+    color: var(--white);
+}
+
+.result-title {
+    font-size: .9rem;
+    padding-block: 1rem;
+}
+
+.score {
+    font-size: 2.5rem;
+}
+
+.out-off {
+    font-size: .75rem;
+}
+
+.score-container {
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    border-radius: 25rem;
+    background-color: var(--circle-color-one);
+    background: linear-gradient(to bottom, rgba(78, 33, 202, 0.829), rgba(78, 33, 202, 0.048))
+}
+
+.score-description {
+    font-size: 1.2rem;
+    padding-block: 1rem;
+}
+
+.result-text {
+    font-size: .75rem;
+    width: 12rem;
+    padding-bottom: 2rem;
+}
+
+.summary {
+    padding-inline: 1.5rem;
+}
+
+.summary-title {
+    font-size: .95rem;
+    padding-block: 1rem;
+    text-align: left;
+}
+
+.summary-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: .8rem;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem;
+    border-radius: 10px;
+}
+
+.summary-item div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: .55rem;
+}
+
+.summary-item:first-child {
+    background-color: hsla(0, 100%, 67%, 0.075);
+}
+
+.summary-item:nth-of-type(2) {
+    background-color: hsl(39, 100%, 56%, 0.075);
+}
+
+.summary-item:nth-of-type(3) {
+    background-color: hsl(166, 100%, 37%, 0.075);
+}
+
+.summary-item:last-child {
+    background-color: hsl(234, 85%, 45%, 0.075);
+}
+
+.test-type {
+    font-size: .85rem;
+}
+
+.summary-item:first-child .test-type {
+    color: hsla(0, 100%, 67%);
+}
+
+.summary-item:nth-of-type(2) .test-type {
+    color: hsl(39, 100%, 56%);
+}
+
+.summary-item:nth-of-type(3) .test-type {
+    color: hsl(166, 100%, 37%);
+}
+
+.summary-item:last-child .test-type {
+    color: hsl(234, 85%, 45%);
+}
+
+.test-score {
+    font-size: .85rem;
+    font-weight: var(--bold);
+}
+
+.test-score span {
+    color: var(--light-lavander);
+}
+
+.summary-btn {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: .85rem;
+    border-radius: 10rem;
+    font-weight: 700;
+    margin-block: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: var(--desktop);
+    }
+
+    .result-summary {
+        width: max-content;
+        display: flex;
+        margin: 8rem auto;
+        box-shadow: 0 0 5px lightgray;
+        border-radius: 1rem;
+    }
+
+    .results {
+        width: var(--mobile);
+    }
+
+    .summary {
+        width: var(--mobile);
+    }
+}
